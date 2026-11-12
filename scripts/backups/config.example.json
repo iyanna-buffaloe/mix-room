@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "image": "/Volumes/Backup Drive/Mix Room Backups.sparsebundle",
+  "volume": "/Volumes/Mix Room Backups",
+  "project": "",
+  "databaseHost": "",
+  "r2Account": "",
+  "savedBucket": "",
+  "siteID": "",
+  "alertFrom": "Mix Room Backups <backups@YOUR_VERIFIED_DOMAIN>",
+  "alertTo": "",
+  "restic": "/opt/homebrew/bin/restic",
+  "pgDump": "/opt/homebrew/opt/libpq/bin/pg_dump",
+  "pgDumpAll": "/opt/homebrew/opt/libpq/bin/pg_dumpall",
+  "pgRestore": "/opt/homebrew/opt/libpq/bin/pg_restore"
+}

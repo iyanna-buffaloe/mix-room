@@ -1,0 +1,89 @@
+/* Guide elements overlay the ordinary room. The room, player and existing
+   workspace panels keep their normal composition and single mounted instances. */
+.mix-room__room-surface { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; min-width: 0; min-height: 0; }
+.mix-room__ordinary-panels, .mix-room__ordinary-panels > [data-guide-panel] { display: contents; }
+.mix-room__tutorial-veil { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; overflow: hidden; pointer-events: none; opacity: 0; }
+.mix-room__tutorial-veil[data-visible='true'] { opacity: 1; }
+.mix-room__tutorial-caption {
+  position: absolute; z-index: 12; top: 12px; right: 12px; width: min(300px, calc(100% - 24px));
+  box-sizing: border-box; padding: 12px; border: 1px solid #7394a6; border-radius: 5px 12px 5px 12px;
+  background: #0c2031ed; color: #edf8ff; text-align: left; font: 400 14px/1.4 var(--toolbar-font);
+}
+.mix-room__tutorial-copy h2 { margin: 0 0 6px; font-size: 17px; line-height: 1.2; color: #b6eff6; }
+.mix-room__tutorial-copy p { margin: 0; }
+.mix-room__tutorial-compact-copy { display: none; }
+.mix-room__tutorial-play-hint, .mix-room__tutorial-deferred { margin: 8px 0 0; color: #f5d8b7; }
+.mix-room__tutorial-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.mix-room__tutorial-actions button, .mix-room .mix-room__tutorial-replay, .mix-room__tutorial-skip, .mix-room__tutorial-deferred button {
+  min-height: 44px; width: auto; padding: 6px 8px; border: 1px solid #6d9bae;
+  border-radius: 4px; background: #183b50; color: #eafaff; font: 600 13px/1.3 var(--toolbar-font); cursor: pointer;
+}
+.mix-room__tutorial-skip { position: absolute; z-index: 14; right: max(12px, var(--stage-safe-right, 0px)); bottom: max(12px, var(--stage-safe-bottom, 0px)); box-shadow: 0 2px 8px #0006; }
+.mix-room .mix-room__tutorial-skip { cursor: pointer !important; }
+.mix-room .mix-room__track-title .mix-room__tutorial-replay { display: inline-block; margin: 4px 4px 0 0; background: transparent; font-size: 12px; }
+.mix-room :is(.mix-room__tutorial-actions button, .mix-room__tutorial-replay, .mix-room__tutorial-skip, .mix-room__tutorial-deferred button):focus-visible { outline: 2px solid #ffb66d; outline-offset: 2px; }
+.mix-room [data-tutorial-control='true'],
+.mix-room[data-tutorial-panel='instruments'] .mix-room__instrument-options,
+.mix-room[data-tutorial-panel='editor'] #editor-instrument-guitar,
+.mix-room[data-tutorial-panel='editor'] .mix-room__editor-actions button[type='submit'],
+.mix-room[data-tutorial-panel='settings'] :is(.mix-room__setting--room-style, .mix-room__setting--labels) { outline: 2px solid #b3ecf3; outline-offset: -2px; border-radius: 4px; }
+/* A full-width mobile panel remains the original panel. Reserve just the
+   overlay's measured space, then let its existing body scroll normally. */
+.mix-room[data-tutorial='true'][data-caption-over-panel='true'] .mix-room__ordinary-panels :is(.mix-room__sidebar, .mix-room__content-overlay) {
+  padding-top: calc(var(--tutorial-caption-height, 100px) + 12px); box-sizing: border-box;
+}
+.mix-room[data-tutorial='true'].mix-room--fullscreen .mix-room__ordinary-panels .mix-room__toolbar { display: flex; }
+.mix-room[data-tutorial='true'].mix-room--fullscreen .mix-room__fullscreen-controls {
+  left: max(12px, var(--stage-safe-left, 0px)); right: 132px; width: auto; translate: none;
+}
+.mix-room[data-tutorial='true'] .mix-room__ordinary-panels * { cursor: auto !important; }
+.mix-room[data-tutorial='true'] .mix-room__ordinary-panels :is(button, input[type='range'], input[type='checkbox']) { cursor: pointer !important; }
+.mix-room[data-tutorial='true'] .mix-room__ordinary-panels input[type='text'] { cursor: text !important; }
+@media (max-width: 600px), (pointer: coarse) and (max-width: 1100px) {
+  .mix-room__tutorial-caption { top: 6px; right: 6px; width: calc(100% - 12px); padding: 5px; font-size: 13px; line-height: 1.2; }
+  .mix-room__tutorial-copy h2 { font-size: 16px; line-height: 1.1; margin-bottom: 2px; }
+  .mix-room__tutorial-actions { margin-top: 4px; gap: 6px; }
+  .mix-room__tutorial-actions button { padding: 4px; }
+  .mix-room--fullscreen .mix-room__tutorial-caption { width: min(290px, calc(100% - 12px)); }
+  .mix-room__tutorial-full-copy { display: none; }
+  .mix-room__tutorial-compact-copy { display: inline; }
+  /* A compact comparison fits between the parts instead of covering their
+     labels. Inspector captions retain their measured top reservation. */
+  .mix-room__tutorial-caption:is([data-section='intro'], [data-section='frequency'], [data-section='volume'], [data-section='panning']) .mix-room__tutorial-copy :is(h2, p) {
+    display: inline; font-size: 13px; line-height: 1.2; letter-spacing: 0;
+  }
+  .mix-room__tutorial-caption:is([data-section='intro'], [data-section='frequency'], [data-section='volume'], [data-section='panning']) .mix-room__tutorial-copy h2 { margin: 0 8px 0 0; }
+  .mix-room[data-view='playing'] .mix-room__tutorial-caption[data-section='intro'] { top: auto; bottom: 62px; }
+  .mix-room[data-view='playing'] .mix-room__tutorial-caption[data-section='frequency'] { top: calc(50% - 3px); transform: translateY(-50%); }
+  .mix-room--fullscreen[data-view='playing'] .mix-room__tutorial-caption[data-section='intro'] { bottom: 92px; }
+}
+@media (max-width: 600px) and (orientation: landscape), (pointer: coarse) and (max-width: 1100px) and (orientation: landscape) {
+  /* The landscape workspace can letterbox the fitted room. Keep overlays on
+     that room rectangle, while existing inspector panels use their own bounds. */
+  .mix-room[data-tutorial='true'][data-view='playing']:not(.mix-room--fullscreen) .mix-room__workspace {
+    --tutorial-room-width: min(100cqw, calc(100cqh * var(--canvas-aspect)));
+    --tutorial-room-height: min(100cqh, calc(100cqw / var(--canvas-aspect)));
+  }
+  .mix-room[data-tutorial='true'][data-view='playing']:not(.mix-room--fullscreen) .mix-room__tutorial-caption {
+    width: calc(var(--tutorial-room-width) - 12px);
+    right: calc((100cqw - var(--tutorial-room-width)) / 2 + 6px);
+  }
+  .mix-room[data-tutorial='true'][data-view='playing']:not(.mix-room--fullscreen) .mix-room__tutorial-skip {
+    right: max(12px, calc((100cqw - var(--tutorial-room-width)) / 2 + 12px));
+    bottom: max(12px, calc(100cqh - var(--tutorial-room-height) + 12px));
+  }
+  .mix-room[data-tutorial='true'][data-view='playing']:not(.mix-room--fullscreen) .mix-room__tutorial-caption[data-section='intro'] { bottom: calc(100cqh - var(--tutorial-room-height) + 62px); }
+  .mix-room[data-tutorial='true'][data-view='playing']:not(.mix-room--fullscreen) .mix-room__tutorial-caption[data-section='frequency'] { top: calc(var(--tutorial-room-height) / 2 - 3px); }
+}
+.mix-room .mix-room__tutorial-caption, .mix-room .mix-room__tutorial-caption * { cursor: auto !important; }
+.mix-room .mix-room__tutorial-caption button { cursor: pointer !important; }
+/* In an existing inspector, the tutorial occupies its top overlay area. Keep
+   the real Close control at the opposite bottom corner from Skip, and give
+   the original body its own scroll space rather than shrinking the room. */
+.mix-room[data-tutorial='true'][data-caption-over-panel='true'] .mix-room__ordinary-panels :is(.mix-room__sidebar, .mix-room__content-overlay) { padding-bottom: 64px; }
+.mix-room[data-tutorial='true'][data-caption-over-panel='true'] .mix-room__ordinary-panels .mix-room__overlay-header { height: 0; min-height: 0; padding: 0; flex: none; }
+.mix-room[data-tutorial='true'][data-caption-over-panel='true'] .mix-room__ordinary-panels .mix-room__overlay-header h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.mix-room[data-tutorial='true'][data-caption-over-panel='true'] .mix-room__ordinary-panels .mix-room__overlay-close { position: absolute; z-index: 13; left: 12px; bottom: 12px; width: 44px; height: 44px; }
+.mix-room[data-tutorial='true'][data-caption-over-panel='true'] .mix-room__ordinary-panels .mix-room__overlay-body { min-height: 0; }
+.mix-room[data-tutorial='true'][data-caption-over-panel='true'] .mix-room__ordinary-panels .mix-room__settings-actions { position: absolute; left: 68px; right: 128px; bottom: 12px; width: auto; padding: 0; }
+.mix-room[data-tutorial='true'][data-caption-over-panel='true'] .mix-room__ordinary-panels .mix-room__settings-actions button { min-height: 44px; }

@@ -1,0 +1,54 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Temporary session files can contain colons, which Windows cannot check out.
+*.ses
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Downloaded weights and reproducible separation output
+projects/local-audio/analysis/models/
+projects/local-audio/analysis/separated/
+projects/local-audio/analysis/__pycache__/
+.venv/
+projects/local-audio/analysis/benchmarks/
+
+# Provider credentials and local job capabilities must never be committed.
+.env
+.env.*
+!.env.example
+.separation-state/
+.separation-functions/
+
+# Private annotation workspace: uploads, raw stems, labels, logs, and caches.
+projects/annotation-lab/data/
+projects/annotation-lab/__pycache__/
+
+# Local visual design studies; these are for comparison, not production.
+/projects/design-mockups/
+
+# Local analysis exports never replace the website demo.
+projects/local-audio/output/
+
+# Private lab report moved alongside the other Markdown notes.
+/docs/research/label-audit-2026-10-16.md

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mix Room · Annotation Lab</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <main class="lab-window">
+      <header class="title-bar"><div><h1>Mix Room: Annotation Lab</h1><p>Listen, mark passages, and build a reference dataset.</p></div><span class="local-badge">LOCAL · NO CREDITS</span></header>
+      <section class="batch-panel" aria-labelledby="batch-heading">
+        <div class="section-heading"><h2 id="batch-heading">1. Add a batch</h2><span id="setup-status" role="status">Checking local setup…</span></div>
+        <div class="batch-controls">
+          <label class="profile-field">Separate into<select id="profile"><option value="drums">6-part drums</option><option value="vocals">Vocal separation</option><option value="quick">Quick · 6 instruments</option></select></label>
+          <label class="button choose-files">+ Add audio files<input id="files" type="file" multiple accept="audio/*,.wav,.mp3,.flac,.aif,.aiff,.ogg,.m4a,.aac,.opus,.wma" /></label>
+          <button id="upload" class="primary" disabled>Upload & process</button>
+        </div>
+        <p id="profile-description" class="muted"></p>
+        <label id="isolated-field" class="check-field"><input type="checkbox" id="isolated" /><span id="isolated-label">These files are already isolated drum tracks</span></label>
+        <ul id="pending-files" aria-label="Files selected for the next batch"></ul>
+        <progress id="upload-progress" max="100" value="0" hidden></progress>
+        <p id="batch-message" role="status"></p>
+      </section>
+      <section class="songs-panel" aria-labelledby="songs-heading">
+        <div class="section-heading"><div><h2 id="songs-heading">2. Listen & label</h2><p class="muted">Choose a stem, then drag across its waveform to select a passage. Times are in seconds.</p></div><div class="export-buttons"><a class="button" href="/api/export">Export JSON</a><a class="button" href="/api/export?format=csv">Export CSV</a></div></div>
+        <p id="connection-status" role="status"></p>
+        <div id="songs"></div>
+        <p id="empty-state">Your songs will appear here. Local separation runs one song at a time; you can label completed songs while the rest finish.</p>
+      </section>
+      <footer>Labels save on this computer in <code>lab/data/</code>, which is excluded from GitHub. JSON includes model versions, settings, audio hashes, and labels.</footer>
+    </main>
+    <template id="song-template">
+      <article class="song-card">
+        <header class="song-heading"><div><h3></h3><span class="song-profile muted"></span></div><div class="job-actions"><span class="job-status"></span><button class="cancel-job" hidden>Cancel</button><button class="retry-job" hidden>Retry</button></div></header>
+        <div class="job-progress"><progress max="100" value="0"></progress><p class="job-message" role="status"></p><pre class="job-error" hidden></pre></div>
+        <div class="song-workspace" hidden>
+          <section class="listen-panel" aria-label="Stem player">
+            <div class="listening-heading"><strong class="listening-to"></strong><span class="audio-stats muted"></span></div>
+            <div class="waveform-wrap"><canvas class="waveform" height="180" aria-label="Audio waveform; drag to select a passage"></canvas><span class="waveform-message"></span></div>
+            <audio controls preload="metadata"></audio>
+            <div class="waveform-controls"><label>View<select class="zoom"><option value="0">Whole song</option><option value="30">30 seconds</option><option value="10">10 seconds</option><option value="3">3 seconds</option></select></label><label class="check-field"><input class="fit-waveform" type="checkbox" checked />Fit waveform</label><button class="clear-selection">Clear selection</button></div>
+            <p class="waveform-note muted">Fit changes the drawing only. Playback volume and saved audio stay unchanged.</p>
+            <h4>Stem bank</h4><div class="stem-bank" role="group" aria-label="Choose a stem"></div>
+            <div class="context-bank" role="group" aria-label="Compare with the original audio"></div>
+            <p class="audio-error" role="alert"></p>
+          </section>
+          <section class="annotation-panel" aria-label="Labels for the selected stem">
+            <div class="section-heading"><h4 class="annotation-title"></h4><span class="save-status" role="status">Saved locally</span></div>
+            <form class="interval-form"><label>Start time<input class="draft-start" type="number" min="0" step="0.001" value="0" required /></label><label>End time<input class="draft-end" type="number" min="0" step="0.001" required /></label><label>Label<select class="draft-label"><option value="genuine">Genuine</option><option value="bleed_absent">Bleed / absent</option><option value="uncertain">Uncertain</option></select></label><button class="add-interval primary" type="submit">+ Add</button></form>
+            <div class="mark-controls"><button class="mark-start">Set start at playhead</button><button class="mark-end">Set end at playhead</button><button class="play-selection">Play selection</button></div>
+            <p class="interval-error" role="alert"></p>
+            <div class="table-wrap"><table><thead><tr><th scope="col">Start time</th><th scope="col">End time</th><th scope="col">Label</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody></tbody></table></div>
+            <p class="no-labels muted">No labels for this stem yet. Unlabelled audio is not treated as absent.</p>
+            <div class="label-actions"><button class="retry-save" hidden>Retry saving</button><button class="export-draft" hidden>Export unsaved draft</button><a class="download-stem button" download>Download stem WAV</a></div>
+          </section>
+        </div>
+      </article>
+    </template>
+  </body>
+</html>

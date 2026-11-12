@@ -1,0 +1,48 @@
+Demon Seed — Nine Inch Nails
+Trent Reznor · The Slip (2008)
+
+Copyright in the original recording and composition remains with their
+respective rights holders.
+
+Source package
+https://archive.org/details/NineInchNails-TheSlipMulti-trackStems
+The archive uploader describes these as FLAC conversions of WAV stems
+originally distributed through remix.nin.com and identifies the package under
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States.
+The exact converted package's artist-issued provenance remains unverified.
+
+Archive license notice
+"the slip is licensed under a creative commons attribution non-commercial
+share alike license."
+The uploader cites http://dl.nin.com/theslip/signup as the original notice.
+
+License and legal terms
+https://creativecommons.org/licenses/by-nc-sa/3.0/us/
+https://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode.en
+
+Mix Room processing
+120,271 samples (2.72723356 seconds) of shared digital silence were removed
+from every original stem with the same sample-aligned cut. The original
+coupled drum stem is retained. The app's existing analysis logic generated
+the visualization frames. Playback combines all thirteen aligned trimmed
+original stems at their supplied relative levels, with one shared headroom
+gain and MP3 encoding.
+
+Revision 2 removes exactly one additional second (44,100 samples at
+44.1 kHz) from that combined demo, then re-encodes at 320 kbps. All
+visualization frame and panning times shift by the same one second. The
+total opening cut is 3.72723356 seconds; no further onset trim is applied.
+The remaining opening rest and natural instrument activity are retained.
+
+Revision 3 removes exactly one further second (44,100 samples at44.1kHz)
+from revision2, re-encoding at320kbps and shifting all visualization frame
+and panning times by the same second. The total cut from the original
+stems is4.72723356seconds. No additional onset trim or drum separation is
+applied; all original combined parts and natural activity remain.
+
+This derivative demo media is offered under CC BY-NC-SA 3.0 US. Shared audio,
+visualizations and synchronized video derivatives must retain attribution,
+source and license notices, identify changes, remain noncommercial and use
+the same or a compatible license permitted by those terms.
+
+Retain this notice with copies of the demo media and its derivatives.

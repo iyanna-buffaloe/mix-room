@@ -1,0 +1,185 @@
+{
+  "title": "Demon Seed",
+  "processingMode": "stems",
+  "instruments": [
+    {
+      "key": "bass",
+      "label": "Bass",
+      "fileName": "Bass.wav",
+      "freq": 0.122,
+      "width": 0.803,
+      "correlation": 0.355,
+      "pan": 0.008,
+      "active": true,
+      "rms": 0.0652766173243028
+    },
+    {
+      "key": "guitar",
+      "label": "Guitar",
+      "fileName": "Gtr.wav",
+      "freq": 0.115,
+      "width": 0.631,
+      "correlation": 0.462,
+      "pan": 0.306,
+      "active": true,
+      "rms": 0.0786803275994654
+    },
+    {
+      "key": "ana_synth",
+      "label": "AnaSynth",
+      "fileName": "AnaSynth.wav",
+      "freq": 0.423,
+      "width": 0.881,
+      "correlation": 0.224,
+      "pan": 0.012,
+      "active": true,
+      "rms": 0.045099704226239094
+    },
+    {
+      "key": "keys",
+      "label": "Keys 1",
+      "fileName": "Keys.wav",
+      "freq": 0.357,
+      "width": 0.267,
+      "correlation": 0.928,
+      "pan": -0.053,
+      "active": true,
+      "rms": 0.0061692514440913745
+    },
+    {
+      "key": "keys_2",
+      "label": "Keys 2",
+      "fileName": "Keys2.wav",
+      "freq": 0.326,
+      "width": 0.425,
+      "correlation": 0.82,
+      "pan": 0.004,
+      "active": true,
+      "rms": 0.0023673332327584966
+    },
+    {
+      "key": "pluck_synth",
+      "label": "Pluck synth",
+      "fileName": "Pluck Synth.wav",
+      "freq": 0.085,
+      "width": 0.189,
+      "correlation": 0.964,
+      "pan": -0.051,
+      "active": true,
+      "rms": 0.008107496375760448
+    },
+    {
+      "key": "strings",
+      "label": "Strings",
+      "fileName": "Strings.wav",
+      "freq": 0.126,
+      "width": 0.477,
+      "correlation": 0.542,
+      "pan": -0.42,
+      "active": true,
+      "rms": 0.013547338275668543
+    },
+    {
+      "key": "breakdown",
+      "label": "Breakdown",
+      "fileName": "Breakdown.wav",
+      "freq": 0.261,
+      "width": 0.627,
+      "correlation": 0.562,
+      "pan": 0.171,
+      "active": true,
+      "rms": 0.010914642282205048
+    },
+    {
+      "key": "tone",
+      "label": "Tone",
+      "fileName": "Tone.wav",
+      "freq": 0.351,
+      "width": 0.692,
+      "correlation": 0.519,
+      "pan": 0.033,
+      "active": true,
+      "rms": 0.01166444132027845
+    },
+    {
+      "key": "lead_vocals",
+      "label": "Lead vocals",
+      "fileName": "LV.wav",
+      "freq": 0.299,
+      "width": 0.493,
+      "correlation": 0.757,
+      "pan": 0.024,
+      "active": true,
+      "rms": 0.02682240399440389
+    },
+    {
+      "key": "backing_vocals",
+      "label": "Backing vocals 1",
+      "fileName": "BV.wav",
+      "freq": 0.236,
+      "width": 0.301,
+      "correlation": 0.909,
+      "pan": 0.028,
+      "active": true,
+      "rms": 0.017911306979684717
+    },
+    {
+      "key": "backing_vocals_2",
+      "label": "Backing vocals 2",
+      "fileName": "BV2.wav",
+      "freq": 0.21,
+      "width": 0.498,
+      "correlation": 0.749,
+      "pan": 0.059,
+      "active": true,
+      "rms": 0.038762654525446597
+    },
+    {
+      "key": "drums",
+      "label": "Drums",
+      "fileName": "Drums.wav",
+      "freq": 0.709,
+      "width": 0.476,
+      "correlation": 0.772,
+      "pan": -0.042,
+      "active": true,
+      "rms": 0.06632904715634577
+    }
+  ],
+  "artist": "Nine Inch Nails",
+  "duration": 306.18185941043083,
+  "audioUrl": "/audio/nin-demon-seed.mp3",
+  "credits": {
+    "noticeUrl": "/audio/nin-demon-seed-LICENSE.txt",
+    "attribution": "Nine Inch Nails \u00b7 Trent Reznor \u00b7 The Slip (2008).",
+    "recordingNotice": "Copyright in the original recording and composition remains with their respective rights holders.",
+    "sourceUrl": "https://archive.org/details/NineInchNails-TheSlipMulti-trackStems",
+    "sourceLabel": "Stem source and archive notices",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/us/",
+    "licenseLabel": "CC BY-NC-SA 3.0 US",
+    "processingNotice": "Mix Room removed 2.727 seconds of shared opening silence from the original stems, then shortened the combined demo by two further one-second cuts. Visualization frames and panning timing follow the same cuts. Playback retains the original combined drum stem and all aligned original parts with one shared headroom adjustment.",
+    "permissionNotice": "The archive identifies these stems under the linked license. Share this demo audio, visualization and synchronized video derivatives with attribution, for noncommercial use, under the same license."
+  },
+  "presentation": {
+    "labels": {
+      "lead_vocals": {
+        "scale": 0.85
+      },
+      "backing_vocals": {
+        "text": "BACKING 1\nVOCALS",
+        "scale": 0.85
+      },
+      "backing_vocals_2": {
+        "text": "BACKING 2\nVOCALS",
+        "scale": 0.85
+      }
+    }
+  },
+  "derivative": {
+    "revision": 3,
+    "additionalOpeningTrimSeconds": 1,
+    "totalOpeningTrimSeconds": 4.727233560090703,
+    "sourceAudioSHA256": "5c57f3fe18b0f5ed67ac5c9932a825133dc02257665da2f7088db23b4286864e",
+    "method": "Decode revision2 to PCM; remove44100samples; encode exact trimmed PCM using installed LAME320kbps. Standaloneencoder gapless tag avoids19sample tail discrepancy in FFmpeg muxer."
+  }
+}

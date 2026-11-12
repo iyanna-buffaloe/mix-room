@@ -1,0 +1,193 @@
+{
+  "title": "1,000,000",
+  "processingMode": "stems",
+  "instruments": [
+    {
+      "key": "bass",
+      "label": "Bass",
+      "fileName": "1,000,000 Bass.flac",
+      "freq": 0.195,
+      "width": 0.314,
+      "correlation": 0.901,
+      "pan": 0.028,
+      "active": true,
+      "rms": 0.04768430310349135
+    },
+    {
+      "key": "guitar",
+      "label": "Guitar 1",
+      "fileName": "1,000,000 Gtr.flac",
+      "freq": 0.501,
+      "width": 0.015,
+      "correlation": 1,
+      "pan": 0.023,
+      "active": true,
+      "rms": 0.06879800018414221
+    },
+    {
+      "key": "guitar_2",
+      "label": "Guitar 2",
+      "fileName": "1,000,000 Gtr2.flac",
+      "freq": 0.182,
+      "width": 0.404,
+      "correlation": 0.728,
+      "pan": 0.368,
+      "active": true,
+      "rms": 0.06474411595411395
+    },
+    {
+      "key": "rozz",
+      "label": "Rozz 1",
+      "fileName": "1,000,000 Rozz.flac",
+      "freq": 0.122,
+      "width": 0.001,
+      "correlation": 1,
+      "pan": 0.005,
+      "active": true,
+      "rms": 0.01031244094849815
+    },
+    {
+      "key": "rozz_2",
+      "label": "Rozz 2",
+      "fileName": "1,000,000 Rozz2.flac",
+      "freq": 0.232,
+      "width": 0.562,
+      "correlation": 0.509,
+      "pan": -0.424,
+      "active": true,
+      "rms": 0.01568861036756824
+    },
+    {
+      "key": "expand",
+      "label": "Expand",
+      "fileName": "1,000,000 expand.flac",
+      "freq": 0.497,
+      "width": 0.674,
+      "correlation": 0.546,
+      "pan": 0,
+      "active": true,
+      "rms": 0.0190849824715939
+    },
+    {
+      "key": "tambourine",
+      "label": "Tambourine",
+      "fileName": "1,000,000 Tamb.flac",
+      "freq": 1,
+      "width": 0.355,
+      "correlation": 0.87,
+      "pan": -0.086,
+      "active": true,
+      "rms": 0.008906309770327603
+    },
+    {
+      "key": "lead_vocals",
+      "label": "Lead vocals",
+      "fileName": "1,000,000 LV.flac",
+      "freq": 0.406,
+      "width": 0.395,
+      "correlation": 0.843,
+      "pan": 0.043,
+      "active": true,
+      "rms": 0.05893858933987339
+    },
+    {
+      "key": "backing_vocals",
+      "label": "Backing vocals",
+      "fileName": "1,000,000 BV.flac",
+      "freq": 0.387,
+      "width": 0.54,
+      "correlation": 0.708,
+      "pan": -0.02,
+      "active": true,
+      "rms": 0.05100622055608581
+    },
+    {
+      "key": "kick",
+      "label": "Kick",
+      "fileName": "kick.wav",
+      "freq": 0.061,
+      "width": 0.009,
+      "correlation": 1,
+      "pan": 0.002,
+      "active": true,
+      "rms": 0.03614083690937591
+    },
+    {
+      "key": "snare",
+      "label": "Snare",
+      "fileName": "snare.wav",
+      "freq": 0.311,
+      "width": 0.064,
+      "correlation": 0.996,
+      "pan": 0.004,
+      "active": true,
+      "rms": 0.049469340411396
+    },
+    {
+      "key": "toms",
+      "label": "Toms",
+      "fileName": "toms.wav",
+      "freq": 0.092,
+      "width": 0.127,
+      "correlation": 0.984,
+      "pan": 0.07,
+      "active": true,
+      "rms": 0.017922791841259538
+    },
+    {
+      "key": "hihat",
+      "label": "Hi-hat",
+      "fileName": "hihat.wav",
+      "freq": 0.884,
+      "width": 0.442,
+      "correlation": 0.8,
+      "pan": 0.077,
+      "active": true,
+      "rms": 0.008006787524980458
+    },
+    {
+      "key": "ride",
+      "label": "Ride",
+      "fileName": "ride.wav",
+      "freq": 0.838,
+      "width": 0.607,
+      "correlation": 0.622,
+      "pan": 0.084,
+      "active": true,
+      "rms": 0.0006449886615141416
+    },
+    {
+      "key": "crash",
+      "label": "Crash",
+      "fileName": "crash.wav",
+      "freq": 0.682,
+      "width": 0.633,
+      "correlation": 0.578,
+      "pan": 0.114,
+      "active": true,
+      "rms": 0.013751743054713883
+    }
+  ],
+  "artist": "Nine Inch Nails",
+  "duration": 250.588231292517,
+  "audioUrl": "/audio/nin-1000000.mp3",
+  "presentation": {
+    "labels": {
+      "guitar": { "scale": 0.88 },
+      "guitar_2": { "scale": 0.9 },
+      "lead_vocals": { "scale": 0.8 },
+      "backing_vocals": { "scale": 0.9 }
+    }
+  },
+  "credits": {
+    "attribution": "Nine Inch Nails · Trent Reznor · The Slip (2008).",
+    "recordingNotice": "Copyright in the original recording and composition remains with their respective rights holders.",
+    "sourceUrl": "https://archive.org/details/NineInchNails-TheSlipMulti-trackStems",
+    "sourceLabel": "Stem source and archive notices",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/us/",
+    "licenseLabel": "CC BY-NC-SA 3.0 US",
+    "processingNotice": "Mix Room separated the supplied drum stem and generated the visualization. Playback combines the aligned original stems with one shared headroom adjustment.",
+    "permissionNotice": "The archive identifies these stems under the linked license. Share this demo audio, visualization and synchronized video derivatives with attribution, for noncommercial use, under the same license.",
+    "noticeUrl": "/audio/nin-1000000-LICENSE.txt"
+  }
+}

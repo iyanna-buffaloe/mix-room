@@ -1,0 +1,7 @@
+audio-separator[cpu]==0.47.0
+# Required by Audio Separator's audio reader on Python 3.13.
+audioread>=3.0
+librosa>=0.10
+numpy
+soundfile
+psutil>=5.9

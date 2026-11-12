@@ -1,0 +1,35 @@
+1,000,000 — Nine Inch Nails
+Trent Reznor · The Slip (2008)
+
+Copyright in the original recording and composition remains with their
+respective rights holders.
+
+Source package
+https://archive.org/details/NineInchNails-TheSlipMulti-trackStems
+The archive uploader describes these as FLAC conversions of WAV stems
+originally distributed through remix.nin.com and identifies the package under
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States.
+The exact converted package's artist-issued provenance remains unverified.
+
+Archive license notice
+"the slip is licensed under a creative commons attribution non-commercial
+share alike license."
+The uploader cites http://dl.nin.com/theslip/signup as the original notice.
+
+License and legal terms
+https://creativecommons.org/licenses/by-nc-sa/3.0/us/
+https://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode.en
+
+Mix Room processing
+Only the supplied Drums stem was further separated, using the existing local
+MDX23C drum model. Every other supplied stem was retained for visualization.
+The app's existing analysis logic generated the visualization frames.
+Playback combines all ten aligned original stems at their supplied relative
+levels, with one shared headroom gain and MP3 encoding.
+
+This derivative demo media is offered under CC BY-NC-SA 3.0 US. Shared audio,
+visualizations and synchronized video derivatives must retain attribution,
+source and license notices, identify changes, remain noncommercial and use
+the same or a compatible license permitted by those terms.
+
+Retain this notice with copies of the demo media and its derivatives.
